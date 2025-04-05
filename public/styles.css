@@ -1,0 +1,81 @@
+/* YouTube Dual Subtitles Styles */
+
+.yt-dual-subs-container {
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  pointer-events: none;
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.original-subtitle {
+  font-size: 1.8em;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+  color: white;
+  margin-bottom: 5px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.translated-subtitle {
+  font-size: 1.5em;
+  color: rgba(255,255,255,0.9);
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.dual-subs-toggle {
+  width: 36px !important;
+  height: 36px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: white !important;
+  cursor: pointer !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-weight: bold !important;
+  font-size: 14px !important;
+  position: relative !important;
+  top: 0 !important;
+  bottom: 0 !important;
+}
+
+.dual-subs-toggle.active {
+  opacity: 1;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .yt-dual-subs-container {
+    width: 90%;
+    bottom: 80px;
+  }
+  
+  .original-subtitle {
+    font-size: 1.4em;
+  }
+  
+  .translated-subtitle {
+    font-size: 1.2em;
+  }
+} 
