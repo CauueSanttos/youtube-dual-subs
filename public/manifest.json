@@ -1,6 +1,7 @@
 {
   "manifest_version": 3,
   "name": "YouTube Dual Subtitles",
+  "author": "Cauê Santos | email@cauesantos.dev",
   "version": "1.0.0",
   "description": "Display dual language subtitles on YouTube videos",
   "permissions": [
@@ -20,15 +21,15 @@
   "action": {
     "default_popup": "index.html",
     "default_icon": {
-      "16": "icon16.png",
-      "48": "icon48.png",
-      "128": "icon128.png"
+      "16": "icon-cc.png",
+      "48": "icon-cc.png",
+      "128": "icon-cc.png"
     }
   },
   "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
+    "16": "icon-cc.png",
+    "48": "icon-cc.png",
+    "128": "icon-cc.png"
   },
   "content_scripts": [
     {
@@ -40,7 +41,7 @@
     }
   ],
   "web_accessible_resources": [{
-    "resources": ["styles.css", "icon16.png", "icon48.png", "icon128.png"],
+    "resources": ["styles.css", "icon-cc.png"],
     "matches": ["https://*.youtube.com/*"]
   }],
   "background": {

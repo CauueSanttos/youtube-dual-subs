@@ -91,6 +91,9 @@ class DualSubtitlesManager {
       max-width: 800px;
     `;
 
+    // Add keyboard listener for the 'd' key
+    document.addEventListener('keydown', this.handleKeyPress.bind(this));
+
     // Listen for settings changes
     chrome.storage.onChanged.addListener((changes) => {
       if (changes.settings) {
@@ -98,14 +101,37 @@ class DualSubtitlesManager {
         this.updateButtonState();
         if (this.container) {
           this.container.style.display = this.settings.enabled ? 'flex' : 'none';
-          // Toggle YouTube captions based on our settings
-          this.toggleYouTubeNativeCaptions(!this.settings.enabled);
         }
+        // Toggle YouTube captions based on our settings
+        this.toggleYouTubeNativeCaptions(!this.settings.enabled);
       }
     });
 
     // Start trying to initialize UI components
     this.tryInitialize();
+  }
+
+  private handleKeyPress(e: KeyboardEvent) {
+    // Check if 'd' or 'D' key was pressed and not in an input field
+    if ((e.key === 'd' || e.key === 'D') && 
+        !['input', 'textarea'].includes((document.activeElement?.tagName || '').toLowerCase())) {
+      // Toggle dual subtitles
+      this.settings.enabled = !this.settings.enabled;
+      chrome.storage.sync.set({ settings: this.settings });
+      
+      // Update UI
+      if (this.button) {
+        this.updateButtonState();
+      }
+      
+      // Toggle visibility of custom subtitles
+      if (this.container) {
+        this.container.style.display = this.settings.enabled ? 'flex' : 'none';
+      }
+      
+      // Toggle visibility of YouTube's native captions
+      this.toggleYouTubeNativeCaptions(!this.settings.enabled);
+    }
   }
 
   private tryInitialize() {

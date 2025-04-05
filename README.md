@@ -2,7 +2,9 @@
 
 A Chrome extension that displays subtitles in two languages simultaneously on YouTube, making it easier to learn foreign languages.
 
-![YouTube Dual Subtitles](https://i.imgur.com/placeholder-image.png)
+<p align="center">
+  <img src="public/icon-cc.png" alt="YouTube Dual Subtitles" width="128" height="128">
+</p>
 
 ## Features
 
