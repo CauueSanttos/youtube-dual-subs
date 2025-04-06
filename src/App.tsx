@@ -114,7 +114,7 @@ function App() {
       
       <footer>
         <p>YouTube Dual Subtitles v1.0</p>
-        <p>Developed by <a href="https://github.com/CauueSanttos">Cauê Santos</a></p>
+        <p>Developed by <a target="_blank" href="https://github.com/CauueSanttos">Cauê Santos</a></p>
       </footer>
     </div>
   )
