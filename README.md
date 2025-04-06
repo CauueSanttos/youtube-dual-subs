@@ -86,6 +86,15 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 4. Push to the branch (`git push origin feature/new-feature`)
 5. Open a Pull Request
 
+## Privacy Policy
+
+We take your privacy seriously. YouTube Dual Subtitles:
+- Does not collect personal identifiable information
+- Does not track your browsing history
+- Stores your preferences only locally in your browser
+
+Read our complete [Privacy Policy](PRIVACY_POLICY.md) to learn more about how we handle your data.
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
